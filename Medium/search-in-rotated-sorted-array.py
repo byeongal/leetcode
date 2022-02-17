@@ -29,5 +29,4 @@ def bsearch(nums: List[int], target: int, pivot_idx: int) -> int:
 class Solution:
     def search(self, nums: List[int], target: int) -> int:
         pivot_idx = find_pivot(nums)
-        print(pivot_idx)
         return bsearch(nums, target, pivot_idx)
