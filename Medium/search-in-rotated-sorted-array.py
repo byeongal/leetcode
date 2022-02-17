@@ -31,7 +31,3 @@ class Solution:
         pivot_idx = find_pivot(nums)
         print(pivot_idx)
         return bsearch(nums, target, pivot_idx)
-
-
-s = Solution()
-s.search([5,1,2,3,4], 1)
