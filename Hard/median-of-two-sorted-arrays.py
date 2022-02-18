@@ -4,8 +4,6 @@ from typing import *
 def get_answer(nums1: List[int], nums2: List[int], nums1_idx: int, nums2_idx: int) -> float:
     total = 0
     iter = 2 if (len(nums1) + len(nums2)) % 2 == 0 else 1
-    print(nums1[nums1_idx:])
-    print(nums2[nums2_idx:])
     for i in range(iter):
         if nums1_idx == len(nums1):
             total += nums2[nums2_idx]
@@ -51,6 +49,3 @@ class Solution:
             if left_cnt == median_idx:
                 return get_answer(nums1, nums2, nums1_idx, nums2_idx)
         return 0.0
-
-s = Solution()
-s.findMedianSortedArrays([1,2], [3,4])
