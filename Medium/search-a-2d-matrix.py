@@ -10,11 +10,13 @@ def find(matrix: List[List[int]], area: List[int], target: int) -> bool:
     if matrix[mid_y][mid_x] == target:
         return True
     if matrix[mid_y][mid_x] < target:
-        return find(matrix, [mid_y, mid_x + 1, mid_y, right_down_x], target) or \
-               find(matrix, [mid_y + 1, left_up_x, right_down_y, right_down_x], target)
+        return find(matrix, [mid_y + 1, left_up_x, right_down_y, right_down_x], target) or find(
+            matrix, [left_up_y, mid_x + 1, right_down_y, right_down_x], target
+        )
     else:
-        return find(matrix, [mid_y, left_up_x, mid_y, mid_x - 1], target) or \
-               find(matrix, [left_up_y, left_up_x, mid_y - 1, right_down_x], target)
+        return find(matrix, [left_up_y, left_up_x, right_down_y, mid_x - 1], target) or find(
+            matrix, [left_up_y, left_up_x, mid_y - 1, right_down_x], target
+        )
 
 
 class Solution:
