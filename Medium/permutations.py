@@ -6,7 +6,7 @@ def solve(nums: List[int], visit: List[bool], output: List[int], answer: List[Li
         answer.append(output[:])
     else:
         for i in range(len(nums)):
-            if visit[i] == False:
+            if not visit[i]:
                 output.append(nums[i])
                 visit[i] = True
                 solve(nums, visit, output, answer)
