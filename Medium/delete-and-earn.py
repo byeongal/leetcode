@@ -15,10 +15,9 @@ class Solution:
         if len(unique_number_list) == 0:
             return memo[0][0]
         for i in range(1, len(unique_number_list)):
-            if unique_number_list[i] - unique_number_list[i-1] > 1:
-                memo[i][0] = (number_dict[unique_number_list[i]] * unique_number_list[i]) + max(memo[i-1])
+            if unique_number_list[i] - unique_number_list[i - 1] > 1:
+                memo[i][0] = (number_dict[unique_number_list[i]] * unique_number_list[i]) + max(memo[i - 1])
             else:
-                memo[i][0] = (number_dict[unique_number_list[i]] * unique_number_list[i]) + memo[i-1][1]
-            memo[i][1] = max(memo[i-1])
+                memo[i][0] = (number_dict[unique_number_list[i]] * unique_number_list[i]) + memo[i - 1][1]
+            memo[i][1] = max(memo[i - 1])
         return max(memo[-1])
-        

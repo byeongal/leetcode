@@ -1,4 +1,5 @@
-from typing import *
+from typing import List
+
 
 class Solution:
     def rob(self, nums: List[int]) -> int:
@@ -9,7 +10,7 @@ class Solution:
         memo[1][0] = nums[1]
         memo[1][1] = max(memo[0])
         for i in range(2, len(nums)):
-            memo[i][0] = nums[i] + max(memo[i-2])
-            memo[i][1] = max(memo[i-1])
-        
+            memo[i][0] = nums[i] + max(memo[i - 2])
+            memo[i][1] = max(memo[i - 1])
+
         return max(memo[-1])

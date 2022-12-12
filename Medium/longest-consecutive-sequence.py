@@ -2,7 +2,7 @@ from typing import Dict, List
 
 
 def get_consecutive_elements_length(num: int, numbers_dict: List[int]) -> int:
-    if not num in numbers_dict:
+    if num not in numbers_dict:
         return 0
     if numbers_dict[num] != -1:
         return numbers_dict[num]

@@ -9,10 +9,10 @@ class ListNode:
 
 
 def list_node_2_int(list_node: ListNode) -> int:
-    ret = ''
+    ret = ""
     cur: ListNode = list_node
     while cur is not None:
-        ret += f'{cur.val}'
+        ret += f"{cur.val}"
         cur = cur.next
     return int(ret[::-1])
 

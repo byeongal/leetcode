@@ -1,4 +1,4 @@
-from typing import *
+from typing import List
 
 
 def find(matrix: List[List[int]], area: List[int], target: int) -> bool:

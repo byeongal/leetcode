@@ -1,4 +1,4 @@
-from typing import *
+from typing import List
 
 
 def find_pivot(nums: List[int]) -> int:

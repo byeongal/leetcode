@@ -1,4 +1,4 @@
-from typing import *
+from typing import List
 
 
 def get_answer(nums1: List[int], nums2: List[int], nums1_idx: int, nums2_idx: int) -> float:
